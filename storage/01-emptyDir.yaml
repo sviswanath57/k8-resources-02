@@ -52,7 +52,7 @@ spec:
       - name: filebeat-conta
         image: docker.elastic.co/beats/filebeat:8.15.1
         ports:
-        - containerPort: 80
+        - containerPort: 8081
         volumeMounts:
         - name: nginx-volume
           mountPath: /var/log/nginx
