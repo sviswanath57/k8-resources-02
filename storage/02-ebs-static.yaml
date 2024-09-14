@@ -88,7 +88,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ebs-static
+  name: ebs-static-pvc
 spec:
   storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set. for static provisioning this is empty
   volumeName: ebs-static
@@ -116,7 +116,7 @@ spec:
   volumes:
   - name: nginx-data
     persistentVolumeClaim:
-      claimName: ebs-static
+      claimName: ebs-static-pvc
 ---
 apiVersion: v1
 kind: Service
