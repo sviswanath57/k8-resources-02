@@ -78,7 +78,7 @@ spec:
   accessModes:
   - ReadWriteOnce #EBS volume should have readwriteonce, because it HD.
   capacity:
-    storage: 10Gi
+    storage: 5Gi
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
