@@ -74,7 +74,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: ebs-static
+  name: ebs-static-pv
 spec:
   accessModes:
   - ReadWriteOnce #EBS volume should have readwriteonce, because it HD.
@@ -91,7 +91,7 @@ metadata:
   name: ebs-static-pvc
 spec:
   storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set. for static provisioning this is empty
-  volumeName: ebs-static
+  volumeName: ebs-static-pv
   accessModes:
     - ReadWriteOnce
   resources:
